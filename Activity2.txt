@@ -1,0 +1,13 @@
+Create a Constructor function Employee.
+It should have properties name, salary, 
+designation
+Add a function to the object that calculates 
+tax based on salary.
+
+Create 2 objects named AP and Lecturer.
+Tax rate for AP is 20% and for lecturer it 
+is 10%;
+
+Add a function to AP object, that display 
+his designation and salary as a 
+single string. 

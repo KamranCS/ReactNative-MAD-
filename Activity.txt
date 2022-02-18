@@ -1,0 +1,6 @@
+let my_name=["abcd","ab,"d","a","cd"]
+
+write a program that seprates the above array in to two arrays, 
+on lenght >=2 condistion
+
+append "greater" to all strings of length > 2
