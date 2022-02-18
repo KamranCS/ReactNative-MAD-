@@ -6,5 +6,5 @@ Resources for Mobile Application Development using React Native
 
 ## JavaScript
 
-1- https://developer.mozilla.org/en-US/docs/Web/JavaScript
-2- https://www.youtube.com/watch?v=Qqx_wzMmFeA (video tutorial by freeCodeCamp)
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- https://www.youtube.com/watch?v=Qqx_wzMmFeA (video tutorial by freeCodeCamp)
