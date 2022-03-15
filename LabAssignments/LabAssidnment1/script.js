@@ -12,7 +12,7 @@ const uncheckedCountSpan = document.getElementById("unchecked-count");
 function newTodo() {
   /*Add Logic for creating a new Todo Item. */
 
-  /*Below lines can be used to updated the data on frontend */
+  /*Below lines can be used to updated the data on frontend */   
   list.innerHTML = "New Item ";
   itemCountSpan.innerHTML = "1";
   uncheckedCountSpan.innerHTML = "1";

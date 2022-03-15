@@ -1,0 +1,23 @@
+step 1- Install Node.Js (download from nodejs.org)
+step2: open node.js command prompt
+step3: run command 
+		node --version
+If shows version number
+
+step4: npm --version
+If shows version number
+
+step5: run command 
+	npm install -g expo-cli
+step 6: run command
+	expo --version
+If shows version number
+step7: Project creation
+	-- change directory to where you want to create project
+		for example: cd e:\projects
+	-- expo init proectname (it can be anything)
+	-- cd proectname
+	-- npm start
+	-- press w from web
+step8 : download expo go app 
+scan qr code from phone
