@@ -1,78 +1,58 @@
-import { StatusBar } from "expo-status-bar";
-import { Button, Text, TextInput, View } from "react-native";
-
+import * as React from "react";
+import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import {
+  BottomTabBar,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 
-/**Home Screen */
-function HomeScreen({ route, navigation }) {
-  let { otherParam } = route.params;
+function HomeScreen() {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-      <Text>{otherParam}</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => {
-          navigation.navigate("Details", {
-            itemId: 86,
-            otherParam: otherParam,
-          });
-        }}
-      />
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Home!</Text>
     </View>
   );
 }
-/*Details Screen */
-function DetailsScreen({ route, navigation }) {
-  let { itemId, otherParam } = route.params;
 
+function SettingsScreen() {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Details Screen</Text>
-      <Text>itemId: {itemId}</Text>
-      <Text>otherParam: {otherParam}</Text>
-      <TextInput
-        onChangeText={(text) => navigation.setParams({ otherParam: text })}
-      />
-      <Button
-        title="Go to Details---Again"
-        onPress={() => navigation.push("Details")}
-      />
-
-      <Button title="Go Back" onPress={() => navigation.popToTop()} />
-      {/**Navigate back to the Home Screen with params */}
-      <Button
-        title="Go Back(Params)"
-        onPress={() =>
-          navigation.navigate({
-            name: "Home",
-            params: { otherParam: otherParam },
-          })
-        }
-      />
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Settings!</Text>
     </View>
   );
 }
-//Create Stack
-const Stack = createNativeStackNavigator(); //{screen, navigator}
-/**App Component */
+function ContactsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Contacts!</Text>
+    </View>
+  );
+}
+function TabMenu() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen></Tab.Screen>
+    </Tab.Navigator>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
-      {/*Navigator contains Screen elements as its children*/}
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{ title: "Overview" }}
-        />
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          initialParams={{ otherParam: "Initial value" }}
-        />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveBackgroundColor: "blue",
+          tabBarInactiveBackgroundColor: "yellow",
+          tabBarInactiveTintColor: "white",
+        }}
+      >
+        <Tab.Screen name="Home" component={TabMenu} />
+        <Tab.Screen name="Contacts" component={ContactsScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
