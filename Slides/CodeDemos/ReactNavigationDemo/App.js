@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
+import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {
@@ -38,21 +39,19 @@ function TabMenu() {
 }
 
 const Tab = createBottomTabNavigator();
-
+let names = ["a", "b", "c", "d"];
+let [name, setName] = useState("");
+const myCalculator = () => {
+  for (n of names) {
+    setName(n);
+  }
+};
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          tabBarActiveBackgroundColor: "blue",
-          tabBarInactiveBackgroundColor: "yellow",
-          tabBarInactiveTintColor: "white",
-        }}
-      >
-        <Tab.Screen name="Home" component={TabMenu} />
-        <Tab.Screen name="Contacts" component={ContactsScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <>
+      {" "}
+      <Text>${name}</Text>
+      <Button onPress={myCalculator}></Button>
+    </>
   );
 }
