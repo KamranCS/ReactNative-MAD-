@@ -1,0 +1,5 @@
+https://react-redux.js.org/tutorials/quick-start
+
+Video Tutorials
+https://www.youtube.com/watch?v=DBIsm8qxAUI
+https://www.youtube.com/watch?v=CVpUuw9XSjY
