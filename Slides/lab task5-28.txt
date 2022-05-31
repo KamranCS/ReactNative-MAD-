@@ -1,0 +1,20 @@
+Create an application that tracks the location of user. Display it on map view using marker 
+
+Make this marker draggable./Or allow user to add marker on map click.
+Add a circle around the user location of 100m radius.
+
+On dragging the use location should change and also the circle.
+
+Try the functions for converting the coordinates to address and see the difference 
+in address for different coordinates.
+
+In code for background location tracking, see the effect of different states Like
+when app is in foreground
+App is in background
+app is closed.
+https://docs.expo.dev/versions/latest/sdk/map-view/
+
+https://github.com/react-native-maps/react-native-maps
+https://docs.expo.dev/versions/latest/sdk/location
+
+
